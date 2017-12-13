@@ -3,8 +3,8 @@ This module lets you practice IMPLEMENTING
 functions that MUTATE their arguments.
 
 Authors: David Mutchler, Valerie Galluzzi, Mark Hays, Amanda Stouder,
-         their colleagues and PUT_YOUR_NAME_HERE.
-"""  # TODO: 1. PUT YOUR NAME IN THE ABOVE LINE.
+         their colleagues and Victoria Szalay.
+"""  # Done: 1. PUT YOUR NAME IN THE ABOVE LINE.
 
 import rosegraphics as rg
 
@@ -145,6 +145,20 @@ def swap_colors(circle, rectangle):
     #      B = temp
     ####################################################################
     # ------------------------------------------------------------------
+    C = rg.Circle(circle.center,circle.radius)
+    R = rg.Rectangle(rectangle.corner_1,rectangle.corner_1)
+    R.fill_color = circle.fill_color
+    C.fill_color = rectangle.fill_color
+    print(R.fill_color)
+    print(C.fill_color)
+    return()
+    C.fill_color = R.fill_color
+    R.fill_color = C.fill_color
+    C.fill_color = rectangle.fill_color
+    R.fill_color = circle.fill_color
+    print(R.fill_color)
+    print(C.fill_color)
+
 
 
 # ----------------------------------------------------------------------
